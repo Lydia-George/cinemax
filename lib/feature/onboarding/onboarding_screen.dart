@@ -3,6 +3,7 @@ import 'package:cinemax/core/constants/images_strings.dart';
 import 'package:cinemax/core/theme/app_colors.dart';
 import 'package:cinemax/core/theme/app_spacing.dart';
 import 'package:cinemax/core/theme/app_text_styles.dart';
+import 'package:cinemax/feature/auth/login_signup/presentation/ui/login_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -37,9 +38,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return;
     }
 
-    // هنبدّل الرسالة بالانتقال إلى Login بعد إنشاء شاشتها.
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Login screen is next')),
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (_) => LoginOrSignupScreen()),
     );
   }
 
@@ -111,8 +112,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               color: isActive
                                   ? AppColors.accentColor
                                   : AppColors.accentColor.withValues(
-                                alpha: 0.45,
-                              ),
+                                      alpha: 0.45,
+                                    ),
                               borderRadius: BorderRadius.circular(10),
                             ),
                           );
