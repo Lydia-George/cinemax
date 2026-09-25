@@ -80,6 +80,13 @@ class AppTextStyles {
     height: 1.4,
   );
 
+  static const TextStyle authTitle = TextStyle(
+    color: AppColors.textPrimary,
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+  );
+
+
 
 
 }

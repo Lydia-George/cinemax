@@ -30,7 +30,7 @@ class AuthHeader extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: IconButton(
                   onPressed: () => Navigator.of(context).maybePop(),
-                  icon: Icon(Icons.chevron_left, size: 22,),
+                  icon: Icon(Icons.chevron_left, size: 22),
                   style: IconButton.styleFrom(
                     backgroundColor: AppColors.inputBorder,
                     minimumSize: const Size(32, 32),
@@ -42,14 +42,17 @@ class AuthHeader extends StatelessWidget {
           ),
         ),
         const SizedBox(height: AppSpacing.xxl),
-        Text(title, textAlign: TextAlign.center,style: AppTextStyles.authAppBar,),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: AppTextStyles.authTitle,
+        ),
         const SizedBox(height: 6),
         Text(
           subTitle,
           textAlign: TextAlign.center,
           style: AppTextStyles.authSubtitle,
         ),
-
       ],
     );
   }
