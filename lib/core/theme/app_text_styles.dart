@@ -86,6 +86,38 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static const TextStyle homeGreeting = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textPrimary,
+  );
+
+  static const TextStyle homeSubtitle = TextStyle(
+    fontSize: 12,
+    color: AppColors.textSecondary,
+  );
+
+  static const TextStyle categoryLabel = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle movieTitle = TextStyle(
+    color: AppColors.textPrimary,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle movieGenre = TextStyle(
+    color: AppColors.textSecondary,
+    fontSize: 12,
+  );
+
+  static const TextStyle movieRating = TextStyle(
+    color: AppColors.ratingColor,
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+  );
 
 
 

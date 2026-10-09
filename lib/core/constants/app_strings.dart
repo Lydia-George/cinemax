@@ -41,6 +41,20 @@ static const String loginSubTitle ='Welcome back! Please enter your details.';
   static const String signupSubTitle ='The latest movies and series are here';
   static const termsAndServices = 'I agree to the Terms and Services and Privacy Policy';
 
+/// -- HOME SCREEN
+  static const String homeGreeting = 'Hello, Smith';
+  static const String homeSubtitle = "Let's stream your favorite movie";
+
+  static const String searchHint = 'Search a title...';
+  static const String searchFilters = 'Search filters';
+
+  static const String categories = 'Categories';
+  static const String allCategories = 'All';
+  static const String mostPopular = 'Most popular';
+
+  static const String noMoviesInCategory = 'No movies found in this category.';
+
+
 
 
 

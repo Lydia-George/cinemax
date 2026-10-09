@@ -7,4 +7,5 @@ class ImagesStrings {
   static const String onboarding3= 'assets/images/onboarding_3.png';
   static const String appLogo= 'assets/images/app_logo.png';
   static const String appIconLogo= 'assets/images/app_icon_splash.png';
+  static const String userAvatar= 'assets/images/user_avatar.png';
 }

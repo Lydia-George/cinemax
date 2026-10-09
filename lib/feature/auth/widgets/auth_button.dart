@@ -2,8 +2,6 @@ import 'package:cinemax/core/theme/app_colors.dart';
 import 'package:cinemax/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/app_strings.dart';
-
 class AuthButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;

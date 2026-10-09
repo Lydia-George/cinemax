@@ -1,9 +1,9 @@
 import 'package:cinemax/core/constants/app_strings.dart';
 import 'package:cinemax/core/constants/images_strings.dart';
+import 'package:cinemax/core/routes/app_routes.dart';
 import 'package:cinemax/core/theme/app_colors.dart';
 import 'package:cinemax/core/theme/app_spacing.dart';
 import 'package:cinemax/core/theme/app_text_styles.dart';
-import 'package:cinemax/feature/auth/login_signup/presentation/ui/login_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -38,10 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       return;
     }
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (_) => LoginOrSignupScreen()),
-    );
+    Navigator.of(context).pushReplacementNamed(AppRoutes.loginOrSignupScreen);
   }
 
   @override

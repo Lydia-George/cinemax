@@ -1,20 +1,17 @@
 import 'package:cinemax/core/constants/app_strings.dart';
 import 'package:cinemax/core/constants/images_strings.dart';
+import 'package:cinemax/core/routes/app_routes.dart';
 import 'package:cinemax/core/theme/app_colors.dart';
 import 'package:cinemax/core/theme/app_spacing.dart';
 import 'package:cinemax/core/theme/app_text_styles.dart';
-import 'package:cinemax/feature/auth/login/presentation/ui/login_screen.dart';
-import 'package:cinemax/feature/auth/signup/presentation/ui/signup_screen.dart';
 import 'package:cinemax/feature/auth/widgets/auth_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginOrSignupScreen extends StatelessWidget {
   const LoginOrSignupScreen({super.key});
 
-  void _openScreen(BuildContext context, Widget screen) {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(builder: (_) => screen),
-    );
+  void _openScreen(BuildContext context, String routeName) {
+    Navigator.of(context).pushNamed(routeName);
   }
 
   void _showSocialMessage(BuildContext context) {
@@ -31,9 +28,7 @@ class LoginOrSignupScreen extends StatelessWidget {
           builder: (context, constraints) {
             return SingleChildScrollView(
               child: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight,
-                ),
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: AppSpacing.lg,
@@ -50,10 +45,7 @@ class LoginOrSignupScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: AppSpacing.md),
 
-                      Text(
-                        AppStrings.appName,
-                        style: AppTextStyles.appName,
-                      ),
+                      Text(AppStrings.appName, style: AppTextStyles.appName),
                       const SizedBox(height: 4),
 
                       Text(
@@ -66,10 +58,8 @@ class LoginOrSignupScreen extends StatelessWidget {
 
                       AuthButton(
                         title: AppStrings.signupButtonTitle,
-                        onPressed: () => _openScreen(
-                          context,
-                          const SignupScreen(),
-                        ),
+                        onPressed: () =>
+                            _openScreen(context, AppRoutes.signupScreen),
                       ),
                       const SizedBox(height: AppSpacing.xl),
 
@@ -81,10 +71,8 @@ class LoginOrSignupScreen extends StatelessWidget {
                             style: AppTextStyles.welcomeFooter,
                           ),
                           GestureDetector(
-                            onTap: () => _openScreen(
-                              context,
-                              const LoginScreen(),
-                            ),
+                            onTap: () =>
+                                _openScreen(context, AppRoutes.loginScreen),
                             child: const Text(
                               AppStrings.loginButtonTitle,
                               style: TextStyle(

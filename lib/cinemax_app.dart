@@ -1,5 +1,6 @@
+import 'package:cinemax/core/routes/app_router.dart';
+import 'package:cinemax/core/routes/app_routes.dart';
 import 'package:cinemax/core/theme/app_theme.dart';
-import 'package:cinemax/feature/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 class CinemaxApp extends StatelessWidget {
   const CinemaxApp({super.key});
@@ -9,7 +10,8 @@ class CinemaxApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: OnboardingScreen(),
+      initialRoute: AppRoutes.homeScreen,
+      onGenerateRoute: AppRouter.onGenerateRoutes,
     );
   }
 }
